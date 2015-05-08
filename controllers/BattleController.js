@@ -7,8 +7,9 @@ characterList.controller('BattleCtrl', function BattleCtrl($scope, CharacterFact
   $scope.player = CharacterFactory.selectedCharacter;
 
 
-  $scope.attack = function() {
-    $scope.troll.health -= 7;
+  $scope.attack = function(monster) {
+    monster.health -= 7;
+    console.log(monster.health);    
     var roll = Math.floor(Math.random() * 10) + 1;
     if (roll < 5) {
       if ($scope.selectedCharacter == 'warrior'){
@@ -21,8 +22,8 @@ characterList.controller('BattleCtrl', function BattleCtrl($scope, CharacterFact
     };
   },
 
-  $scope.attackbahamut = function() {
-    $scope.bahamut.health -= 20;
+  $scope.attack2 = function(monster) {
+    monster.health -= 10;
     var roll = Math.floor(Math.random() * 10) + 1;
     if (roll < 5) {
       if ($scope.selectedCharacter == 'warrior'){

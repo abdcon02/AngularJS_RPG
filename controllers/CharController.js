@@ -1,4 +1,4 @@
-characterList.controller('CharCtrl', function CharCtrl($scope, CharacterFactory) {
+characterList.controller('CharCtrl', function CharCtrl($scope, CharacterFactory, ItemsFactory) {
   $scope.characters = CharacterFactory.character;
   $scope.warrior = CharacterFactory.warrior;
   $scope.mage = CharacterFactory.mage;
